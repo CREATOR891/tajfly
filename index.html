@@ -3,16 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TajFly — авиабилеты по всем направлениям</title>
-<meta name="description" content="TajFly: авиабилеты по всем направлениям из Таджикистана в Россию, Европу, Корею и Китай и обратно. Заявка в WhatsApp или Telegram.">
+
+<title>TajFly — авиабилеты из Таджикистана | Россия, Европа, Корея, Китай</title>
+
+<meta name="description" content="TajFly — авиабилеты из Таджикистана в Россию, Европу, Южную Корею и Китай. Душанбе, Худжанд, Куляб и другие города. Оставьте заявку на билет в WhatsApp или Telegram.">
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<link rel="canonical" href="https://creator891.github.io/tajfly/">
+
+<meta name="theme-color" content="#0E2A47">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="TajFly — авиабилеты из Таджикистана">
+<meta property="og:description" content="Авиабилеты из Таджикистана в Россию, Европу, Южную Корею и Китай. Заявка на билет в WhatsApp или Telegram.">
+<meta property="og:url" content="https://creator891.github.io/tajfly/">
+<meta property="og:site_name" content="TajFly">
+<meta property="og:locale" content="ru_RU">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TajFly — авиабилеты из Таджикистана">
+<meta name="twitter:description" content="Авиабилеты из Таджикистана в Россию, Европу, Южную Корею и Китай.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "TajFly",
+  "alternateName": "TajFly авиабилеты",
+  "url": "https://creator891.github.io/tajfly/",
+  "inLanguage": "ru-RU"
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+
 <style>
 :root{--navy:#0E2A47;--navy2:#16385C;--sun:#FFC93C;--bg:#F1F5F9;--card:#fff;--ink:#0E2A47;--mute:#52667C;--line:#D6DEE7;--side:260px}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;font-size:16px;line-height:1.55}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+
 .side{position:fixed;inset:0 auto 0 0;width:var(--side);background:var(--navy);color:#F4F7FB;display:flex;flex-direction:column;padding:24px 16px}
 .logo{font-family:Anton,Impact,sans-serif;font-size:28px;letter-spacing:.04em;padding:0 10px 22px;border-bottom:1px solid var(--navy2);margin-bottom:16px}
 .logo small{display:block;font-family:Manrope,sans-serif;font-size:12px;letter-spacing:.14em;color:#9DB4CC;margin-top:2px}
@@ -24,42 +57,55 @@ a{color:inherit}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:12px;border:0;background:var(--sun);color:var(--navy);font:inherit;font-weight:800;cursor:pointer;text-decoration:none}
 .btn.line{background:none;border:2px solid var(--navy);color:var(--navy)}
 .sidecta .btn{width:100%}
+
 main{margin-left:var(--side);padding:40px clamp(18px,4vw,56px) 56px;max-width:calc(1100px + var(--side))}
 .page{display:none}.page.on{display:block}
+
 h1{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(36px,5vw,60px);line-height:1.05;margin:0 0 10px;letter-spacing:.01em;text-transform:uppercase}
 h2{font-size:22px;margin:0 0 12px}
 .lead{color:var(--mute);max-width:620px;margin:0 0 24px}
+
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
 .form{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
 .form .full{grid-column:1/-1}
+
 label{display:grid;gap:5px;font-weight:700;font-size:14px}
 input,select{min-height:48px;padding:0 12px;border:1.5px solid var(--line);border-radius:10px;font:inherit;background:#fff;color:var(--ink);width:100%}
+
 .seg{display:flex;gap:8px;flex-wrap:wrap}
 .seg button{flex:1 1 200px;min-height:48px;border:2px solid var(--navy);background:#fff;color:var(--navy);font:inherit;font-weight:800;border-radius:12px;cursor:pointer}
 .seg button[aria-pressed="true"]{background:var(--navy);color:var(--sun)}
+
 .swap{align-self:end;min-height:48px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+
 .route{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);font-weight:700}
 .route:last-child{border:0}
 .route span{color:var(--mute);font-weight:500;font-size:14px}
 .route button{min-height:40px;padding:0 14px;font-size:14px}
+
 .steps{counter-reset:s;display:grid;gap:14px;padding:0;list-style:none;margin:0 0 28px}
 .steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 70px;position:relative}
 .steps li::before{content:counter(s);position:absolute;left:18px;top:12px;font-family:Anton,sans-serif;font-size:34px;color:var(--navy);background:var(--sun);width:38px;height:44px;display:grid;place-items:center;border-radius:8px}
+
 details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
 summary{font-weight:800;cursor:pointer}
 details p{margin:10px 0 0;color:var(--mute)}
+
 .contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .contacts h3{margin:0 0 4px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
 .contacts p{margin:0;font-weight:800;font-size:18px;word-break:break-word}
 .note{font-size:13px;color:var(--mute);margin-top:14px}
+
 @media (max-width:860px){
-  .side{position:sticky;top:0;inset:auto;width:auto;flex-direction:row;align-items:center;padding:8px 12px;gap:8px;overflow-x:auto;z-index:5}
-  .logo{border:0;margin:0;padding:0 10px 0 0;font-size:22px;white-space:nowrap}.logo small{display:none}
-  .nav{flex-direction:row}.nav button{border-left:0;border-bottom:4px solid transparent;white-space:nowrap;border-radius:8px 8px 0 0}
-  .nav button[aria-current="page"]{border-bottom-color:var(--sun)}
-  .sidecta{display:none}
-  main{margin-left:0;padding-top:24px}
+.side{position:sticky;top:0;inset:auto;width:auto;flex-direction:row;align-items:center;padding:8px 12px;gap:8px;overflow-x:auto;z-index:5}
+.logo{border:0;margin:0;padding:0 10px 0 0;font-size:22px;white-space:nowrap}
+.logo small{display:none}
+.nav{flex-direction:row}
+.nav button{border-left:0;border-bottom:4px solid transparent;white-space:nowrap;border-radius:8px 8px 0 0}
+.nav button[aria-current="page"]{border-bottom-color:var(--sun)}
+.sidecta{display:none}
+main{margin-left:0;padding-top:24px}
 }
 
 /* ===== АНИМАЦИИ ===== */
@@ -67,58 +113,79 @@ details p{margin:10px 0 0;color:var(--mute)}
 .ind{position:absolute;left:0;top:0;width:4px;height:46px;background:var(--sun);border-radius:0 4px 4px 0;box-shadow:0 0 14px var(--sun)}
 .nav button svg{width:20px;height:20px;flex:none}
 .logo svg{width:22px;height:22px;vertical-align:-4px;margin-right:8px}
-.sky{margin-top:auto}.sidecta{margin-top:12px}
+
+.sky{margin-top:auto}
+.sidecta{margin-top:12px}
+
 .strip{display:flex;align-items:center;gap:16px;margin:0 0 20px;font-weight:800;font-size:14px;letter-spacing:.14em}
 .lane{position:relative;flex:1;height:36px;overflow:hidden}
 .lane:before{content:"";position:absolute;left:0;right:0;top:50%;border-top:3px dashed var(--navy);opacity:.35}
 .plane{position:absolute;top:50%;width:24px;height:24px;margin-top:-12px;left:-4%}
 .strip.rtl .plane{transform:scaleX(-1)}
+
 @media screen{
-  .side{background:linear-gradient(160deg,#0E2A47,#143A63,#0E2A47);background-size:220% 220%;animation:sbg 14s ease infinite}
-  @keyframes sbg{0%,100%{background-position:0 0}50%{background-position:100% 100%}}
-  .ind{transition:top .45s cubic-bezier(.3,1.5,.5,1),height .3s}
-  .nav button{opacity:0;animation:navin .55s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d,0s);transition:background .2s,color .2s,transform .25s}
-  @keyframes navin{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
-  .nav button:hover{transform:translateX(7px)}
-  .nav button svg{transition:transform .35s}
-  .nav button:hover svg{transform:rotate(-14deg) scale(1.25)}
-  .nav button[aria-current="page"] svg{animation:wob 2.4s ease-in-out infinite}
-  @keyframes wob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
-  .logo svg{animation:bob 3s ease-in-out infinite}
-  @keyframes bob{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(3px,-4px) rotate(-8deg)}}
-  .page.on{animation:pgin .55s cubic-bezier(.2,.8,.2,1)}
-  @keyframes pgin{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
-  .page.on .card,.page.on .steps li,.page.on details,.page.on .route,.page.on .strip{animation:pop .6s cubic-bezier(.2,.8,.2,1) both}
-  @keyframes pop{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:none}}
-  .page.on .grid>*:nth-child(2),.page.on .contacts>*:nth-child(2),.page.on .steps li:nth-child(2),.page.on details:nth-of-type(2){animation-delay:.12s}
-  .page.on .contacts>*:nth-child(3),.page.on .steps li:nth-child(3),.page.on details:nth-of-type(3){animation-delay:.24s}
-  .page.on .contacts>*:nth-child(4){animation-delay:.36s}
-  .page.on .route:nth-child(2){animation-delay:.1s}.page.on .route:nth-child(3){animation-delay:.2s}.page.on .route:nth-child(4){animation-delay:.3s}.page.on .route:nth-child(5){animation-delay:.4s}
-  .card{transition:transform .25s,box-shadow .25s}
-  .card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(14,42,71,.14)}
-  .btn{position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}
-  .btn:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);transition:left .6s}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(14,42,71,.25)}
-  .btn:hover:after{left:130%}
-  .btn:active{transform:scale(.97)}
-  .form .btn,.sidecta .btn{animation:ring 2.2s infinite}
-  @keyframes ring{0%{box-shadow:0 0 0 0 rgba(255,201,60,.7)}100%{box-shadow:0 0 0 18px rgba(255,201,60,0)}}
-  .seg button{transition:background .25s,color .25s,transform .2s}
-  .seg button:hover{transform:translateY(-2px)}
-  .seg button[aria-pressed="true"]{animation:pick .35s ease}
-  @keyframes pick{50%{transform:scale(1.04)}}
-  .strip .plane{animation:fly 3.4s linear infinite}
-  .strip.rtl .plane{animation-name:flyb}
-  @keyframes fly{from{left:-6%}to{left:100%}}
-  @keyframes flyb{from{left:100%}to{left:-6%}}
-  .strip span{transition:color .3s}
-  details p{animation:pgin .4s}
-  input:focus,select:focus{border-color:var(--navy);box-shadow:0 0 0 4px rgba(255,201,60,.45);transition:box-shadow .2s}
-  .route{transition:padding-left .2s}.route:hover{padding-left:8px}
+.side{background:linear-gradient(160deg,#0E2A47,#143A63,#0E2A47);background-size:220% 220%;animation:sbg 14s ease infinite}
+@keyframes sbg{0%,100%{background-position:0 0}50%{background-position:100% 100%}}
+
+.ind{transition:top .45s cubic-bezier(.3,1.5,.5,1),height .3s}
+.nav button{opacity:0;animation:navin .55s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d,0s);transition:background .2s,color .2s,transform .25s}
+@keyframes navin{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
+.nav button:hover{transform:translateX(7px)}
+.nav button svg{transition:transform .35s}
+.nav button:hover svg{transform:rotate(-14deg) scale(1.25)}
+.nav button[aria-current="page"] svg{animation:wob 2.4s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+
+.logo svg{animation:bob 3s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(3px,-4px) rotate(-8deg)}}
+
+.page.on{animation:pgin .55s cubic-bezier(.2,.8,.2,1)}
+@keyframes pgin{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+.page.on .card,.page.on .steps li,.page.on details,.page.on .route,.page.on .strip{animation:pop .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:none}}
+
+.page.on .grid>*:nth-child(2),.page.on .contacts>*:nth-child(2),.page.on .steps li:nth-child(2),.page.on details:nth-of-type(2){animation-delay:.12s}
+.page.on .contacts>*:nth-child(3),.page.on .steps li:nth-child(3),.page.on details:nth-of-type(3){animation-delay:.24s}
+.page.on .contacts>*:nth-child(4){animation-delay:.36s}
+
+.page.on .route:nth-child(2){animation-delay:.1s}
+.page.on .route:nth-child(3){animation-delay:.2s}
+.page.on .route:nth-child(4){animation-delay:.3s}
+.page.on .route:nth-child(5){animation-delay:.4s}
+
+.card{transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(14,42,71,.14)}
+
+.btn{position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.btn:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(14,42,71,.25)}
+.btn:hover:after{left:130%}
+.btn:active{transform:scale(.97)}
+.form .btn,.sidecta .btn{animation:ring 2.2s infinite}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(255,201,60,.7)}100%{box-shadow:0 0 0 18px rgba(255,201,60,0)}}
+
+.seg button{transition:background .25s,color .25s,transform .2s}
+.seg button:hover{transform:translateY(-2px)}
+.seg button[aria-pressed="true"]{animation:pick .35s ease}
+@keyframes pick{50%{transform:scale(1.04)}}
+
+.strip .plane{animation:fly 3.4s linear infinite}
+.strip.rtl .plane{animation-name:flyb}
+@keyframes fly{from{left:-6%}to{left:100%}}
+@keyframes flyb{from{left:100%}to{left:-6%}}
+
+.strip span{transition:color .3s}
+details p{animation:pgin .4s}
+input:focus,select:focus{border-color:var(--navy);box-shadow:0 0 0 4px rgba(255,201,60,.45);transition:box-shadow .2s}
+.route{transition:padding-left .2s}
+.route:hover{padding-left:8px}
 }
-@media (max-width:860px){.ind,.sky{display:none}}
+
+@media (max-width:860px){.ind,.sky{display:none}.motion{display:none}}
 
 body{background:radial-gradient(1200px 500px at 80% -10%,#FFF1C9 0,transparent 60%),linear-gradient(180deg,#EAF1F8,#F3F6FA 40%,#F3F6FA)}
+
 .hero{position:relative;overflow:hidden;border-radius:28px;padding:48px clamp(22px,4vw,48px) 84px;margin-bottom:26px;color:#fff;background:linear-gradient(165deg,#0A2342 0%,#15467D 55%,#3F86C9 100%);box-shadow:0 24px 50px rgba(14,42,71,.28)}
 .hero.sm{padding:34px clamp(22px,4vw,48px) 34px}
 .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,transparent,rgba(255,201,60,.18));pointer-events:none}
@@ -128,32 +195,42 @@ body{background:radial-gradient(1200px 500px at 80% -10%,#FFF1C9 0,transparent 6
 .hero.sm .lead{margin-bottom:0}
 .hero .strip{color:#FFE9A8;margin:6px 0 0}
 .hero .lane:before{border-color:#fff;opacity:.55}
+
 .rays{position:absolute;right:-170px;top:-170px;width:520px;height:520px;border-radius:50%;background:repeating-conic-gradient(rgba(255,214,90,.34) 0 7deg,transparent 7deg 22deg);-webkit-mask:radial-gradient(circle,#000 18%,transparent 68%);mask:radial-gradient(circle,#000 18%,transparent 68%)}
 .halo{position:absolute;right:-90px;top:-90px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(255,214,90,.65) 0,rgba(255,201,60,.25) 40%,transparent 70%)}
 .sunc{position:absolute;right:34px;top:30px;width:132px;height:132px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#FFF6C4,#FFD95A 45%,#FFC93C 75%);box-shadow:0 0 60px 26px rgba(255,201,60,.55)}
 .hero.sm .sunc{width:84px;height:84px;right:30px;top:24px;box-shadow:0 0 40px 16px rgba(255,201,60,.5)}
 .hero.sm .rays{width:360px;height:360px;right:-130px;top:-150px}
 .hero.sm .halo{width:260px;height:260px;right:-70px;top:-80px}
+
 .hc{position:absolute;left:0;height:46px;border-radius:46px;background:rgba(255,255,255,.16);z-index:1}
 .hc:before,.hc:after{content:"";position:absolute;background:inherit;border-radius:50%}
-.hc:before{width:60px;height:60px;left:22px;top:-28px}.hc:after{width:46px;height:46px;left:84px;top:-18px}
+.hc:before{width:60px;height:60px;left:22px;top:-28px}
+.hc:after{width:46px;height:46px;left:84px;top:-18px}
+
 .hero + .card{position:relative;z-index:3;margin-top:-62px;box-shadow:0 18px 44px rgba(14,42,71,.18);border:0}
 .card{box-shadow:0 8px 28px rgba(14,42,71,.07)}
 .steps li{box-shadow:0 6px 20px rgba(14,42,71,.06);border:0}
 details{box-shadow:0 5px 16px rgba(14,42,71,.05);border:0}
-@media (max-width:860px){.sunc{width:92px;height:92px;right:14px;top:16px}.rays{right:-190px}.hero{padding-bottom:78px}}
+
+@media (max-width:860px){
+.sunc{width:92px;height:92px;right:14px;top:16px}
+.rays{right:-190px}
+.hero{padding-bottom:78px}
+}
+
 @media screen{
-  .sunc{animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both,pulse 4.5s ease-in-out 1.6s infinite}
-  @keyframes rise{from{transform:translateY(120px) scale(.6);opacity:0}to{transform:none;opacity:1}}
-  @keyframes pulse{0%,100%{box-shadow:0 0 56px 22px rgba(255,201,60,.5)}50%{box-shadow:0 0 90px 40px rgba(255,201,60,.75)}}
-  .rays{animation:spin 70s linear infinite}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  .halo{animation:breathe 5s ease-in-out infinite}
-  @keyframes breathe{0%,100%{transform:scale(.94);opacity:.85}50%{transform:scale(1.08);opacity:1}}
-  .hc{animation:cl var(--t,60s) linear infinite;animation-delay:var(--dl,0s)}
-  @keyframes cl{from{transform:translateX(-320px)}to{transform:translateX(1500px)}}
-  .hero h1{animation:pgin .8s cubic-bezier(.2,.8,.2,1) .15s both}
-  .hero .lead{animation:pgin .8s cubic-bezier(.2,.8,.2,1) .3s both}
+.sunc{animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both,pulse 4.5s ease-in-out 1.6s infinite}
+@keyframes rise{from{transform:translateY(120px) scale(.6);opacity:0}to{transform:none;opacity:1}}
+@keyframes pulse{0%,100%{box-shadow:0 0 56px 22px rgba(255,201,60,.5)}50%{box-shadow:0 0 90px 40px rgba(255,201,60,.75)}}
+.rays{animation:spin 70s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.halo{animation:breathe 5s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(.94);opacity:.85}50%{transform:scale(1.08);opacity:1}}
+.hc{animation:cl var(--t,60s) linear infinite;animation-delay:var(--dl,0s)}
+@keyframes cl{from{transform:translateX(-320px)}to{transform:translateX(1500px)}}
+.hero h1{animation:pgin .8s cubic-bezier(.2,.8,.2,1) .15s both}
+.hero .lead{animation:pgin .8s cubic-bezier(.2,.8,.2,1) .3s both}
 }
 
 .arr{display:inline-block;width:19px;height:19px;margin:0 5px;vertical-align:-4px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath transform='rotate(90 12 12)' d='M12 1C13 1 13.8 2.2 13.8 4V9L22 14V16.5L13.8 14.3V19.5L16 21.3V23L12 22L8 23V21.3L10.2 19.5V14.3L2 16.5V14L10.2 9V4C10.2 2.2 11 1 12 1Z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath transform='rotate(90 12 12)' d='M12 1C13 1 13.8 2.2 13.8 4V9L22 14V16.5L13.8 14.3V19.5L16 21.3V23L12 22L8 23V21.3L10.2 19.5V14.3L2 16.5V14L10.2 9V4C10.2 2.2 11 1 12 1Z'/%3E%3C/svg%3E") center/contain no-repeat}
@@ -161,33 +238,41 @@ details{box-shadow:0 5px 16px rgba(14,42,71,.05);border:0}
 .route b .arr{color:var(--sun);filter:drop-shadow(0 0 1px var(--navy))}
 @media screen{.arr{transition:transform .3s}.seg button:hover .arr,.route:hover .arr,.card h2:hover .arr{transform:translateX(6px)}}
 
-/* ===== МЕНЮ: самолёт-индикатор, солнце, звёзды, волна ===== */
 .nav button{position:relative;overflow:hidden}
 .fly{position:absolute;right:8px;top:8px;width:24px;height:24px;pointer-events:none;z-index:3;filter:drop-shadow(0 0 8px rgba(255,201,60,.9));transform:rotate(90deg)}
 .fly svg{width:100%;height:100%;display:block}
 .rip{position:absolute;border-radius:50%;background:rgba(255,201,60,.5);width:12px;height:12px;margin:-6px 0 0 -6px;pointer-events:none}
+
 .motion{display:block;width:100%;margin-top:10px;min-height:40px;border-radius:10px;border:1px solid #2C4E75;background:none;color:#9DB4CC;font:inherit;font-weight:700;font-size:13px;cursor:pointer}
 .motion:hover{color:#fff;border-color:#9DB4CC}
+
 html.still *,html.still *:before,html.still *:after{animation:none!important;transition:none!important}
 html.still .nav button{opacity:1!important}
+
 .side:before{content:"";position:absolute;left:-70px;top:-70px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(255,214,90,.5),rgba(255,201,60,.15) 45%,transparent 68%);pointer-events:none}
 .side:after{content:"";position:absolute;right:26px;top:22px;width:3px;height:3px;border-radius:50%;background:#fff;box-shadow:-46px 34px 0 #fff,-96px 12px 0 #CFE0F2,-22px 78px 0 #CFE0F2,-120px 60px 0 #fff;pointer-events:none}
+
 @media screen{
-  .fly{transition:top .75s cubic-bezier(.55,0,.2,1),transform .35s}
-  .fly.park svg{animation:bobx 1.8s ease-in-out infinite}
-  @keyframes bobx{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
-  .nav button[aria-current="page"]:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.2) 50%,transparent 70%);background-size:250% 100%;animation:shim 2.8s linear infinite;pointer-events:none}
-  @keyframes shim{from{background-position:250% 0}to{background-position:-150% 0}}
-  .rip{animation:rip .65s ease-out forwards}
-  @keyframes rip{to{transform:scale(22);opacity:0}}
-  .side:before{animation:breathe 5s ease-in-out infinite}
-  .side:after{animation:tw 3s ease-in-out infinite}
-  @keyframes tw{50%{opacity:.25}}
-  .nav button:hover{background:#1D4A7A}
+.fly{transition:top .75s cubic-bezier(.55,0,.2,1),transform .35s}
+.fly.park svg{animation:bobx 1.8s ease-in-out infinite}
+@keyframes bobx{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+
+.nav button[aria-current="page"]:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.2) 50%,transparent 70%);background-size:250% 100%;animation:shim 2.8s linear infinite;pointer-events:none}
+@keyframes shim{from{background-position:250% 0}to{background-position:-150% 0}}
+
+.rip{animation:rip .65s ease-out forwards}
+@keyframes rip{to{transform:scale(22);opacity:0}}
+
+.side:before{animation:breathe 5s ease-in-out infinite}
+.side:after{animation:tw 3s ease-in-out infinite}
+@keyframes tw{50%{opacity:.25}}
+.nav button:hover{background:#1D4A7A}
 }
+
 @media (max-width:860px){.fly,.side:before,.side:after{display:none}.motion{display:none}}
 
 #p-home .hero h1{text-transform:none;letter-spacing:.02em;font-size:clamp(50px,8vw,92px)}
+
 .strips{display:grid;gap:2px;margin-top:8px}
 .strips .strip{margin:0;font-size:12px;opacity:.72;gap:12px}
 .strips .strip.act{opacity:1;color:#FFE9A8}
@@ -195,11 +280,14 @@ html.still .nav button{opacity:1!important}
 .strips .strip span:last-child{min-width:118px;text-align:right}
 .strips .lane{height:26px}
 .strips .plane{width:24px;height:24px;margin-top:-12px}
-.strips.rtl .plane{transform:scaleX(-1);animation-name:flyb}
 .btnrow{display:flex;flex-wrap:wrap;gap:10px}
 .tgb{background:#2AABEE;color:#fff}
 .route b{display:block}
-@media (max-width:560px){.strips .strip{font-size:10px;letter-spacing:.06em;gap:8px}.strips .strip span:first-child,.strips .strip span:last-child{min-width:78px}}
+
+@media (max-width:560px){
+.strips .strip{font-size:10px;letter-spacing:.06em;gap:8px}
+.strips .strip span:first-child,.strips .strip span:last-child{min-width:78px}
+}
 
 .strips .strip{opacity:1;font-size:14px}
 .strips .lane{height:34px}
@@ -207,157 +295,1410 @@ html.still .nav button{opacity:1!important}
 .strips .strip span:last-child{min-width:128px;text-align:right}
 .chg{animation:lblin .7s cubic-bezier(.2,.8,.2,1)}
 @keyframes lblin{from{opacity:0;transform:translateY(8px) scale(.9);color:#fff}to{opacity:1;transform:none}}
-@media (max-width:560px){.strips .strip span:first-child,.strips .strip span:last-child{min-width:84px}}
+
+@media (max-width:560px){
+.strips .strip span:first-child,.strips .strip span:last-child{min-width:84px}
+}
 
 .strips .strip{font-size:15px}
 .strips .lane{height:56px}
 .strips .lane:before{border-top-width:5px;opacity:.75}
 .strips .plane{width:44px;height:44px;margin-top:-22px;filter:drop-shadow(0 3px 6px rgba(0,0,0,.35))}
 .strips .strip span:first-child,.strips .strip span:last-child{min-width:140px}
+
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .chips button{min-height:34px;padding:0 12px;border-radius:999px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);font:inherit;font-weight:700;font-size:13px;cursor:pointer;transition:background .2s,color .2s,transform .2s}
 .chips button:hover{transform:translateY(-2px)}
 .chips button[aria-pressed="true"]{background:var(--navy);color:var(--sun)}
-@media (max-width:560px){.strips .strip span:first-child,.strips .strip span:last-child{min-width:84px}.strips .plane{width:36px;height:36px;margin-top:-18px}}
+
+@media (max-width:560px){
+.strips .strip span:first-child,.strips .strip span:last-child{min-width:84px}
+.strips .plane{width:36px;height:36px;margin-top:-18px}
+}
 </style>
 </head>
+
 <body>
+
 <aside class="side">
-  <div class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><g transform="rotate(90 12 12)"><path d="M12 1C13 1 13.8 2.2 13.8 4V9L22 14V16.5L13.8 14.3V19.5L16 21.3V23L12 22L8 23V21.3L10.2 19.5V14.3L2 16.5V14L10.2 9V4C10.2 2.2 11 1 12 1Z" fill="#FFC93C"/></g></svg><span id="brand">TajFly</span><small>АВИАБИЛЕТЫ ПО ВСЕМ НАПРАВЛЕНИЯМ</small></div>
-  <nav class="nav" id="nav" aria-label="Меню"></nav>
-  <div class="sky" aria-hidden="true"><svg width="100%" height="70" viewBox="0 0 228 70"><path id="sp" d="M8 60Q114 -22 220 60" fill="none" stroke="#2C4E75" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round"/><g><g transform="translate(-14 -14) scale(1.17)"><g transform="rotate(90 12 12)"><path d="M12 1C13 1 13.8 2.2 13.8 4V9L22 14V16.5L13.8 14.3V19.5L16 21.3V23L12 22L8 23V21.3L10.2 19.5V14.3L2 16.5V14L10.2 9V4C10.2 2.2 11 1 12 1Z" fill="#FFC93C"/></g></g><animateMotion dur="5s" repeatCount="indefinite" rotate="auto"><mpath href="#sp"/></animateMotion></g></svg></div>
-  <div class="sidecta"><a class="btn" id="sideWa" href="#">Написать в WhatsApp</a>
-    <button class="motion" id="motion" type="button">Анимации: вкл</button></div>
+
+<div class="logo">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<g transform="rotate(90 12 12)">
+<path d="M12 1C13 1 13.8 2.2 13.8 4V9L22 14V16.5L13.8 14.3V19.5L16 21.3V23L12 22L8 23V21.3L10.2 19.5V14.3L2 16.5V14L10.2 9V4C10.2 2.2 11 1 12 1Z" fill="#FFC93C"/>
+</g>
+</svg>
+<span id="brand">TajFly</span>
+<small>АВИАБИЛЕТЫ ПО ВСЕМ НАПРАВЛЕНИЯМ</small>
+</div>
+
+<nav class="nav" id="nav" aria-label="Меню"></nav>
+
+<div class="sky" aria-hidden="true">
+<svg width="100%" height="70" viewBox="0 0 228 70">
+<path id="sp" d="M8 60Q114 -22 220 60" fill="none" stroke="#2C4E75" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round"/>
+<g>
+<g transform="translate(-14 -14) scale(1.17)">
+<g transform="rotate(90 12 12)">
+<path d="M12 1C13 1 13.8 2.2 13.8 4V9L22 14V16.5L13.8 14.3V19.5L16 21.3V23L12 22L8 23V21.3L10.2 19.5V14.3L2 16.5V14L10.2 9V4C10.2 2.2 11 1 12 1Z" fill="#FFC93C"/>
+</g>
+</g>
+<animateMotion dur="5s" repeatCount="indefinite" rotate="auto">
+<mpath href="#sp"/>
+</animateMotion>
+</g>
+</svg>
+</div>
+
+<div class="sidecta">
+<a class="btn" id="sideWa" href="#">Написать в WhatsApp</a>
+<button class="motion" id="motion" type="button">Анимации: вкл</button>
+</div>
+
 </aside>
 
 <main>
-  <section class="page" id="p-home">
-    <div class="hero"><div class="rays" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div><div class="sunc" aria-hidden="true"></div><i class="hc" style="top:26%;width:190px;--t:62s;--dl:-10s"></i><i class="hc" style="top:58%;width:260px;--t:84s;--dl:-44s;opacity:.7"></i><i class="hc" style="top:78%;width:150px;--t:52s;--dl:-26s;opacity:.85"></i><div class="hin"><h1>TajFly</h1><p class="lead">Авиабилеты по всем направлениям: из Таджикистана в Россию, Европу, Южную Корею и Китай, и обратно. Оставьте заявку, и менеджер подберёт варианты и сообщит условия до оплаты.</p><div class="strips" id="strips" aria-hidden="true"></div></div></div>
-    
-    <div class="card">
-      <form class="form" id="form">
-        <div class="full seg" role="group" aria-label="Направление">
-          <button type="button" id="dTR" aria-pressed="true">Из Таджикистана</button>
-          <button type="button" id="dRT" aria-pressed="false">В Таджикистан</button>
-        </div>
-        <div class="fld"><label>Откуда<input id="from" list="dlFrom" required placeholder="Город вылета"></label><div class="chips" id="chipsFrom" role="group" aria-label="Страна вылета"></div></div>
-        <div class="fld"><label>Куда<input id="to" list="dlTo" required placeholder="Город прилёта"></label><div class="chips" id="chipsTo" role="group" aria-label="Страна прилёта"></div></div>
-        <label>Дата туда<input id="d1" type="date" required></label>
-        <label>Дата обратно (если нужно)<input id="d2" type="date"></label>
-        <label>Пассажиры<select id="pax"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
-        <label>Ваше имя<input id="name" required autocomplete="name"></label>
-        <label>Телефон<input id="tel" type="tel" required autocomplete="tel" placeholder="+"></label>
-        <div class="full"><div class="btnrow"><button class="btn" type="submit">Отправить заявку в WhatsApp</button><button class="btn tgb" type="button" id="sendTg">Отправить заявку в Telegram</button></div><p class="note">Выберите страну кнопками под полями, затем город. Заявка откроется в мессенджере с готовым текстом. Цены и условия сообщит менеджер.</p><p class="note" id="tgNote" style="white-space:pre-wrap"></p></div>
-      </form>
-      <datalist id="dlFrom"></datalist><datalist id="dlTo"></datalist>
-    </div>
-  </section>
 
-  <section class="page" id="p-routes">
-    <div class="hero sm"><div class="rays" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div><div class="sunc" aria-hidden="true"></div><i class="hc" style="top:26%;width:190px;--t:62s;--dl:-10s"></i><i class="hc" style="top:58%;width:260px;--t:84s;--dl:-44s;opacity:.7"></i><i class="hc" style="top:78%;width:150px;--t:52s;--dl:-26s;opacity:.85"></i><div class="hin"><h1>Направления</h1><p class="lead">Нажмите «Запросить», и город подставится в заявку.</p></div></div>
-    <h2>Из Таджикистана</h2>
-    <div class="grid" id="routesTR"></div>
-    <h2 style="margin-top:34px">В Таджикистан</h2>
-    <div class="grid" id="routesRT"></div>
-    <p class="note">Цены указаны «от» и могут меняться. Если нужного города нет в списке, впишите его в заявке вручную. Условия сообщит менеджер.</p>
-  </section>
+<section class="page" id="p-home">
 
-  <section class="page" id="p-how">
-    <div class="hero sm"><div class="rays" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div><div class="sunc" aria-hidden="true"></div><i class="hc" style="top:26%;width:190px;--t:62s;--dl:-10s"></i><i class="hc" style="top:58%;width:260px;--t:84s;--dl:-44s;opacity:.7"></i><i class="hc" style="top:78%;width:150px;--t:52s;--dl:-26s;opacity:.85"></i><div class="hin"><h1>Как купить</h1><p class="lead">Три простых шага.</p></div></div>
-    <ol class="steps">
-      <li><b>Оставьте заявку.</b><br>Выберите направление, даты и число пассажиров на главной странице.</li>
-      <li><b>Получите варианты.</b><br>Менеджер напишет вам в мессенджере с вариантами рейсов и условиями тарифа.</li>
-      <li><b>Подтвердите и оплатите.</b><br>Оплата и оформление — после того, как вы согласуете рейс и условия.</li>
-    </ol>
-    <h2>Частые вопросы</h2>
-    <details><summary>Какие документы нужны для поездки?</summary><p>Это зависит от гражданства, правил авиакомпании и стран. Менеджер подскажет, а проверить требования лучше и в официальных источниках.</p></details>
-    <details><summary>Можно ли вернуть или поменять билет?</summary><p>Условия зависят от тарифа авиакомпании. Менеджер сообщит их до оплаты.</p></details>
-    <details><summary>Как узнать цену?</summary><p>Цены на билеты меняются. Оставьте заявку, и менеджер назовёт актуальные варианты.</p></details>
-  </section>
+<div class="hero">
+<div class="rays" aria-hidden="true"></div>
+<div class="halo" aria-hidden="true"></div>
+<div class="sunc" aria-hidden="true"></div>
 
-  <section class="page" id="p-contacts">
-    <div class="hero sm"><div class="rays" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div><div class="sunc" aria-hidden="true"></div><i class="hc" style="top:26%;width:190px;--t:62s;--dl:-10s"></i><i class="hc" style="top:58%;width:260px;--t:84s;--dl:-44s;opacity:.7"></i><i class="hc" style="top:78%;width:150px;--t:52s;--dl:-26s;opacity:.85"></i><div class="hin"><h1>Контакты</h1><p class="lead">Свяжитесь любым удобным способом.</p></div></div>
-    <div class="contacts">
-      <div class="card"><h3>Телефон</h3><p id="cPhone"></p></div>
-      <div class="card"><h3>WhatsApp / Telegram</h3><p id="cMsg"></p></div>
-      <div class="card"><h3>Адрес</h3><p id="cAddr"></p></div>
-      <div class="card"><h3>Часы работы</h3><p id="cHours"></p></div>
-    </div>
-    <p style="margin-top:20px"><a class="btn" id="cWa" href="#">Написать в WhatsApp</a> <a class="btn line" id="cTg" href="#">Telegram</a></p>
-  </section>
+<i class="hc" style="top:26%;width:190px;--t:62s;--dl:-10s"></i>
+<i class="hc" style="top:58%;width:260px;--t:84s;--dl:-44s;opacity:.7"></i>
+<i class="hc" style="top:78%;width:150px;--t:52s;--dl:-26s;opacity:.85"></i>
+
+<div class="hin">
+
+<h1>TajFly</h1>
+
+<p class="lead">
+TajFly — авиабилеты из Таджикистана в Россию, Европу, Южную Корею и Китай и обратно.
+Подберите направление, оставьте заявку и получите варианты перелёта от менеджера.
+</p>
+
+<div class="strips" id="strips" aria-hidden="true"></div>
+
+</div>
+</div>
+
+<div class="card">
+
+<form class="form" id="form">
+
+<div class="full seg" role="group" aria-label="Направление">
+<button type="button" id="dTR" aria-pressed="true">Из Таджикистана</button>
+<button type="button" id="dRT" aria-pressed="false">В Таджикистан</button>
+</div>
+
+<div class="fld">
+<label>
+Откуда
+<input id="from" list="dlFrom" required placeholder="Город вылета">
+</label>
+<div class="chips" id="chipsFrom" role="group" aria-label="Страна вылета"></div>
+</div>
+
+<div class="fld">
+<label>
+Куда
+<input id="to" list="dlTo" required placeholder="Город прилёта">
+</label>
+<div class="chips" id="chipsTo" role="group" aria-label="Страна прилёта"></div>
+</div>
+
+<label>
+Дата туда
+<input id="d1" type="date" required>
+</label>
+
+<label>
+Дата обратно (если нужно)
+<input id="d2" type="date">
+</label>
+
+<label>
+Пассажиры
+<select id="pax">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+</select>
+</label>
+
+<label>
+Ваше имя
+<input id="name" required autocomplete="name">
+</label>
+
+<label>
+Телефон
+<input id="tel" type="tel" required autocomplete="tel" placeholder="+">
+</label>
+
+<div class="full">
+
+<div class="btnrow">
+<button class="btn" type="submit">Отправить заявку в WhatsApp</button>
+<button class="btn tgb" type="button" id="sendTg">Отправить заявку в Telegram</button>
+</div>
+
+<p class="note">
+Выберите страну кнопками под полями, затем город. Заявка откроется в мессенджере с готовым текстом.
+Цены и условия сообщит менеджер.
+</p>
+
+<p class="note" id="tgNote" style="white-space:pre-wrap"></p>
+
+</div>
+
+</form>
+
+<datalist id="dlFrom"></datalist>
+<datalist id="dlTo"></datalist>
+
+</div>
+
+</section>
+
+
+<section class="page" id="p-routes">
+
+<div class="hero sm">
+<div class="rays" aria-hidden="true"></div>
+<div class="halo" aria-hidden="true"></div>
+<div class="sunc" aria-hidden="true"></div>
+
+<i class="hc" style="top:26%;width:190px;--t:62s;--dl:-10s"></i>
+<i class="hc" style="top:58%;width:260px;--t:84s;--dl:-44s;opacity:.7"></i>
+<i class="hc" style="top:78%;width:150px;--t:52s;--dl:-26s;opacity:.85"></i>
+
+<div class="hin">
+<h1>Направления</h1>
+<p class="lead">Нажмите «Запросить», и город подставится в заявку.</p>
+</div>
+</div>
+
+<h2>Из Таджикистана</h2>
+<div class="grid" id="routesTR"></div>
+
+<h2 style="margin-top:34px">В Таджикистан</h2>
+<div class="grid" id="routesRT"></div>
+
+<p class="note">
+Цены указаны «от» и могут меняться. Если нужного города нет в списке, впишите его в заявке вручную.
+Условия сообщит менеджер.
+</p>
+
+</section>
+
+
+<section class="page" id="p-how">
+
+<div class="hero sm">
+<div class="rays" aria-hidden="true"></div>
+<div class="halo" aria-hidden="true"></div>
+<div class="sunc" aria-hidden="true"></div>
+
+<i class="hc" style="top:26%;width:190px;--t:62s;--dl:-10s"></i>
+<i class="hc" style="top:58%;width:260px;--t:84s;--dl:-44s;opacity:.7"></i>
+<i class="hc" style="top:78%;width:150px;--t:52s;--dl:-26s;opacity:.85"></i>
+
+<div class="hin">
+<h1>Как купить</h1>
+<p class="lead">Три простых шага.</p>
+</div>
+</div>
+
+<ol class="steps">
+
+<li>
+<b>Оставьте заявку.</b><br>
+Выберите направление, даты и число пассажиров на главной странице.
+</li>
+
+<li>
+<b>Получите варианты.</b><br>
+Менеджер напишет вам в мессенджере с вариантами рейсов и условиями тарифа.
+</li>
+
+<li>
+<b>Подтвердите и оплатите.</b><br>
+Оплата и оформление — после того, как вы согласуете рейс и условия.
+</li>
+
+</ol>
+
+<h2>Частые вопросы</h2>
+
+<details>
+<summary>Какие документы нужны для поездки?</summary>
+<p>
+Это зависит от гражданства, правил авиакомпании и стран.
+Менеджер подскажет, а проверить требования лучше и в официальных источниках.
+</p>
+</details>
+
+<details>
+<summary>Можно ли вернуть или поменять билет?</summary>
+<p>
+Условия зависят от тарифа авиакомпании. Менеджер сообщит их до оплаты.
+</p>
+</details>
+
+<details>
+<summary>Как узнать цену?</summary>
+<p>
+Цены на билеты меняются. Оставьте заявку, и менеджер назовёт актуальные варианты.
+</p>
+</details>
+
+</section>
+
+
+<section class="page" id="p-contacts">
+
+<div class="hero sm">
+<div class="rays" aria-hidden="true"></div>
+<div class="halo" aria-hidden="true"></div>
+<div class="sunc" aria-hidden="true"></div>
+
+<i class="hc" style="top:26%;width:190px;--t:62s;--dl:-10s"></i>
+<i class="hc" style="top:58%;width:260px;--t:84s;--dl:-44s;opacity:.7"></i>
+<i class="hc" style="top:78%;width:150px;--t:52s;--dl:-26s;opacity:.85"></i>
+
+<div class="hin">
+<h1>Контакты</h1>
+<p class="lead">Свяжитесь любым удобным способом.</p>
+</div>
+</div>
+
+<div class="contacts">
+
+<div class="card">
+<h3>Телефон</h3>
+<p id="cPhone"></p>
+</div>
+
+<div class="card">
+<h3>WhatsApp / Telegram</h3>
+<p id="cMsg"></p>
+</div>
+
+<div class="card">
+<h3>Адрес</h3>
+<p id="cAddr"></p>
+</div>
+
+<div class="card">
+<h3>Часы работы</h3>
+<p id="cHours"></p>
+</div>
+
+</div>
+
+<p style="margin-top:20px">
+<a class="btn" id="cWa" href="#">Написать в WhatsApp</a>
+<a class="btn line" id="cTg" href="#">Telegram</a>
+</p>
+
+</section>
+
 </main>
 
+
 <script>
-/* ===== ВПИШИТЕ СВОИ ДАННЫЕ ЗДЕСЬ ===== */
+
 var CONFIG = {
-  brand: "TajFly",
-  whatsapp: "+992940707072",
-  telegramPhone: "+992938800337",
-  telegram: "SadiSharifov1992",
-  phone: "+992 94 070 70 72",
-  address: "Таджикистан",
-  hours: "Пн–Сб, 09:00–19:00",
-  tjCities: ["Душанбе","Худжанд","Бохтар","Куляб","Хорог","Пенджикент","Истаравшан"],
-  regions: {
-    ru: {name:"Россия", label:"РОССИЯ", cities:["Москва (Домодедово)", "Санкт-Петербург", "Екатеринбург", "Новосибирск", "Казань", "Нижний Новгород", "Челябинск", "Самара", "Омск", "Ростов-на-Дону", "Уфа", "Красноярск", "Пермь", "Воронеж", "Волгоград", "Краснодар", "Саратов", "Тюмень", "Тольятти", "Ижевск", "Барнаул", "Ульяновск", "Иркутск", "Хабаровск", "Ярославль", "Владивосток", "Махачкала", "Томск", "Оренбург", "Кемерово", "Новокузнецк", "Рязань", "Астрахань", "Набережные Челны", "Пенза", "Липецк", "Киров", "Чебоксары", "Тула", "Калининград", "Курск", "Ставрополь", "Сочи", "Улан-Удэ", "Тверь", "Магнитогорск", "Иваново", "Брянск", "Белгород", "Сургут", "Владимир", "Архангельск", "Чита", "Калуга", "Смоленск", "Волжский", "Курган", "Орёл", "Череповец", "Владикавказ", "Мурманск", "Саранск", "Якутск", "Вологда", "Тамбов", "Стерлитамак", "Грозный", "Кострома", "Петрозаводск", "Нижневартовск", "Йошкар-Ола", "Новороссийск", "Ханты-Мансийск", "Нижнекамск", "Нальчик", "Благовещенск", "Сыктывкар", "Псков", "Великий Новгород", "Южно-Сахалинск", "Петропавловск-Камчатский", "Магадан", "Норильск", "Новый Уренгой"]},
-    eu: {name:"Европа", label:"ЕВРОПА", cities:["Стамбул", "Лондон", "Париж", "Берлин", "Рим", "Мадрид", "Барселона", "Амстердам", "Брюссель", "Вена", "Прага", "Варшава", "Будапешт", "Афины", "Лиссабон", "Дублин", "Стокгольм", "Осло", "Копенгаген", "Хельсинки", "Цюрих", "Женева", "Милан", "Мюнхен", "Франкфурт", "Гамбург", "Дюссельдорф", "Кёльн", "Штутгарт", "Венеция", "Неаполь", "Флоренция", "Валенсия", "Севилья", "Порту", "Краков", "Гданьск", "Вроцлав", "Братислава", "Любляна", "Загреб", "Белград", "София", "Бухарест", "Рига", "Вильнюс", "Таллин", "Минск", "Ницца", "Лион", "Марсель", "Манчестер", "Эдинбург", "Роттердам", "Валлетта", "Рейкьявик", "Люксембург", "Тирана", "Скопье", "Сараево", "Подгорица", "Кишинёв", "Салоники", "Ганновер", "Нюрнберг", "Бремен", "Лейпциг", "Дрезден", "Брно", "Острава", "Познань", "Лодзь", "Катовице", "Гётеборг", "Мальмё", "Берген", "Бергамо", "Болонья", "Турин", "Генуя", "Палермо", "Бирмингем", "Глазго", "Лидс", "Бристоль", "Антверпен", "Гаага", "Зальцбург", "Грац", "Инсбрук", "Базель", "Лугано", "Пафос", "Ларнака"]},
-    kr: {name:"Южная Корея", label:"КОРЕЯ", cities:["Сеул (Инчхон)", "Сеул (Гимпо)", "Пусан", "Тэгу", "Инчхон", "Кванджу", "Тэджон", "Ульсан", "Сувон", "Чеджу", "Чхонджу", "Чханвон", "Чонджу", "Кимхэ", "Пхохан", "Асан", "Ансан", "Пучхон"]},
-    cn: {name:"Китай", label:"КИТАЙ", cities:["Урумчи", "Пекин", "Шанхай", "Гуанчжоу", "Шэньчжэнь", "Чэнду", "Ханчжоу", "Нанкин", "Ухань", "Сиань", "Чунцин", "Тяньцзинь", "Харбин", "Шэньян", "Далянь", "Циндао", "Кашгар", "Куньмин", "Чанша", "Чжэнчжоу", "Гонконг", "Сямэнь", "Нинбо", "Хэфэй", "Фучжоу", "Наньнин", "Ланьчжоу", "Хайкоу", "Тайюань", "Цзинань", "Ичан", "Иу", "Сучжоу", "Уси", "Хотан", "Корла", "Кульджа", "Яньцзи"]}
-  },
-  routes: [
-    ["ru","Душанбе","Москва (Домодедово)","от 1 500 TJS / 12 000 RUB"],
-    ["ru","Душанбе","Санкт-Петербург","от 1 800 TJS / 14 400 RUB"],
-    ["ru","Душанбе","Екатеринбург","от 1 700 TJS / 13 600 RUB"],
-    ["ru","Душанбе","Новосибирск","от 1 900 TJS / 15 200 RUB"],
-    ["ru","Душанбе","Казань","от 1 700 TJS / 13 600 RUB"],
-    ["eu","Душанбе","Стамбул",""],["eu","Душанбе","Лондон",""],["eu","Душанбе","Париж",""],["eu","Душанбе","Берлин",""],["eu","Душанбе","Рим",""],["eu","Душанбе","Мадрид",""],
-    ["kr","Душанбе","Сеул (Инчхон)",""],["kr","Душанбе","Пусан",""],
-    ["cn","Душанбе","Урумчи",""],["cn","Душанбе","Пекин",""],["cn","Душанбе","Шанхай",""],["cn","Душанбе","Гуанчжоу",""]
-  ]
+
+brand: "TajFly",
+
+whatsapp: "+992940707072",
+
+telegramPhone: "+992938800337",
+
+telegram: "SadiSharifov1992",
+
+phone: "+992 94 070 70 72",
+
+address: "Таджикистан",
+
+hours: "Пн–Сб, 09:00–19:00",
+
+tjCities: [
+"Душанбе",
+"Худжанд",
+"Бохтар",
+"Куляб",
+"Хорог",
+"Пенджикент",
+"Истаравшан"
+],
+
+regions: {
+
+ru:{
+name:"Россия",
+label:"РОССИЯ",
+cities:[
+"Москва (Домодедово)",
+"Санкт-Петербург",
+"Екатеринбург",
+"Новосибирск",
+"Казань",
+"Нижний Новгород",
+"Челябинск",
+"Самара",
+"Омск",
+"Ростов-на-Дону",
+"Уфа",
+"Красноярск",
+"Пермь",
+"Воронеж",
+"Волгоград",
+"Краснодар",
+"Саратов",
+"Тюмень",
+"Тольятти",
+"Ижевск",
+"Барнаул",
+"Ульяновск",
+"Иркутск",
+"Хабаровск",
+"Ярославль",
+"Владивосток",
+"Махачкала",
+"Томск",
+"Оренбург",
+"Кемерово",
+"Новокузнецк",
+"Рязань",
+"Астрахань",
+"Набережные Челны",
+"Пенза",
+"Липецк",
+"Киров",
+"Чебоксары",
+"Тула",
+"Калининград",
+"Курск",
+"Ставрополь",
+"Сочи",
+"Улан-Удэ",
+"Тверь",
+"Магнитогорск",
+"Иваново",
+"Брянск",
+"Белгород",
+"Сургут",
+"Владимир",
+"Архангельск",
+"Чита",
+"Калуга",
+"Смоленск",
+"Волжский",
+"Курган",
+"Орёл",
+"Череповец",
+"Владикавказ",
+"Мурманск",
+"Саранск",
+"Якутск",
+"Вологда",
+"Тамбов",
+"Стерлитамак",
+"Грозный",
+"Кострома",
+"Петрозаводск",
+"Нижневартовск",
+"Йошкар-Ола",
+"Новороссийск",
+"Ханты-Мансийск",
+"Нижнекамск",
+"Нальчик",
+"Благовещенск",
+"Сыктывкар",
+"Псков",
+"Великий Новгород",
+"Южно-Сахалинск",
+"Петропавловск-Камчатский",
+"Магадан",
+"Норильск",
+"Новый Уренгой"
+]
+},
+
+eu:{
+name:"Европа",
+label:"ЕВРОПА",
+cities:[
+"Стамбул",
+"Лондон",
+"Париж",
+"Берлин",
+"Рим",
+"Мадрид",
+"Барселона",
+"Амстердам",
+"Брюссель",
+"Вена",
+"Прага",
+"Варшава",
+"Будапешт",
+"Афины",
+"Лиссабон",
+"Дублин",
+"Стокгольм",
+"Осло",
+"Копенгаген",
+"Хельсинки",
+"Цюрих",
+"Женева",
+"Милан",
+"Мюнхен",
+"Франкфурт",
+"Гамбург",
+"Дюссельдорф",
+"Кёльн",
+"Штутгарт",
+"Венеция",
+"Неаполь",
+"Флоренция",
+"Валенсия",
+"Севилья",
+"Порту",
+"Краков",
+"Гданьск",
+"Вроцлав",
+"Братислава",
+"Любляна",
+"Загреб",
+"Белград",
+"София",
+"Бухарест",
+"Рига",
+"Вильнюс",
+"Таллин",
+"Минск",
+"Ницца",
+"Лион",
+"Марсель",
+"Манчестер",
+"Эдинбург",
+"Роттердам",
+"Валлетта",
+"Рейкьявик",
+"Люксембург",
+"Тирана",
+"Скопье",
+"Сараево",
+"Подгорица",
+"Кишинёв",
+"Салоники",
+"Ганновер",
+"Нюрнберг",
+"Бремен",
+"Лейпциг",
+"Дрезден",
+"Брно",
+"Острава",
+"Познань",
+"Лодзь",
+"Катовице",
+"Гётеборг",
+"Мальмё",
+"Берген",
+"Бергамо",
+"Болонья",
+"Турин",
+"Генуя",
+"Палермо",
+"Бирмингем",
+"Глазго",
+"Лидс",
+"Бристоль",
+"Антверпен",
+"Гаага",
+"Зальцбург",
+"Грац",
+"Инсбрук",
+"Базель",
+"Лугано",
+"Пафос",
+"Ларнака"
+]
+},
+
+kr:{
+name:"Южная Корея",
+label:"КОРЕЯ",
+cities:[
+"Сеул (Инчхон)",
+"Сеул (Гимпо)",
+"Пусан",
+"Тэгу",
+"Инчхон",
+"Кванджу",
+"Тэджон",
+"Ульсан",
+"Сувон",
+"Чеджу",
+"Чхонджу",
+"Чханвон",
+"Чонджу",
+"Кимхэ",
+"Пхохан",
+"Асан",
+"Ансан",
+"Пучхон"
+]
+},
+
+cn:{
+name:"Китай",
+label:"КИТАЙ",
+cities:[
+"Урумчи",
+"Пекин",
+"Шанхай",
+"Гуанчжоу",
+"Шэньчжэнь",
+"Чэнду",
+"Ханчжоу",
+"Нанкин",
+"Ухань",
+"Сиань",
+"Чунцин",
+"Тяньцзинь",
+"Харбин",
+"Шэньян",
+"Далянь",
+"Циндао",
+"Кашгар",
+"Куньмин",
+"Чанша",
+"Чжэнчжоу",
+"Гонконг",
+"Сямэнь",
+"Нинбо",
+"Хэфэй",
+"Фучжоу",
+"Наньнин",
+"Ланьчжоу",
+"Хайкоу",
+"Тайюань",
+"Цзинань",
+"Ичан",
+"Иу",
+"Сучжоу",
+"Уси",
+"Хотан",
+"Корла",
+"Кульджа",
+"Яньцзи"
+]
+}
+
+},
+
+routes:[
+["ru","Душанбе","Москва (Домодедово)","от 1 500 TJS / 12 000 RUB"],
+["ru","Душанбе","Санкт-Петербург","от 1 800 TJS / 14 400 RUB"],
+["ru","Душанбе","Екатеринбург","от 1 700 TJS / 13 600 RUB"],
+["ru","Душанбе","Новосибирск","от 1 900 TJS / 15 200 RUB"],
+["ru","Душанбе","Казань","от 1 700 TJS / 13 600 RUB"],
+["eu","Душанбе","Стамбул",""],
+["eu","Душанбе","Лондон",""],
+["eu","Душанбе","Париж",""],
+["eu","Душанбе","Берлин",""],
+["eu","Душанбе","Рим",""],
+["eu","Душанбе","Мадрид",""],
+["kr","Душанбе","Сеул (Инчхон)",""],
+["kr","Душанбе","Пусан",""],
+["cn","Душанбе","Урумчи",""],
+["cn","Душанбе","Пекин",""],
+["cn","Душанбе","Шанхай",""],
+["cn","Душанбе","Гуанчжоу",""]
+]
+
 };
 
-var PAGES=[["home","Главная"],["routes","Направления"],["how","Как купить"],["contacts","Контакты"]], dir="TR";
-function $(i){return document.getElementById(i)}
-function mk(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e}
-$("brand").textContent=CONFIG.brand;
-var WA=String(CONFIG.whatsapp).replace(/\D/g,""), TP=String(CONFIG.telegramPhone).replace(/\D/g,""), wa="https://wa.me/"+WA, tg="https://t.me/SadiSharifov1992";
-["sideWa","cWa"].forEach(function(i){$(i).href=wa});$("cTg").href=tg;
-$("cPhone").textContent=CONFIG.phone;$("cMsg").textContent="WhatsApp: +"+WA+" · Telegram: @SadiSharifov1992";
-$("cAddr").textContent=CONFIG.address;$("cHours").textContent=CONFIG.hours;
 
-var ICONS={home:'<path d="M3 11l9-8 9 8M5 10v10h14V10"/>',routes:'<circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18c8 0 0-12 8-12"/>',how:'<path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/>',contacts:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>'};
-var navBuilt=false,ind=null;
-function buildNav(){
-  var n=$("nav");ind=mk("span","ind");ind.setAttribute("aria-hidden","true");n.appendChild(ind);fly=mk("span","fly");fly.setAttribute("aria-hidden","true");fly.innerHTML='<svg viewBox="0 0 24 24"><path d="M12 1C13 1 13.8 2.2 13.8 4V9L22 14V16.5L13.8 14.3V19.5L16 21.3V23L12 22L8 23V21.3L10.2 19.5V14.3L2 16.5V14L10.2 9V4C10.2 2.2 11 1 12 1Z" fill="#FFC93C" stroke="#0E2A47" stroke-width=".8" stroke-linejoin="round"/></svg>';n.appendChild(fly);
-  PAGES.forEach(function(x,k){var b=mk("button");b.dataset.p=x[0];b.style.setProperty("--d",(0.15+k*0.09)+"s");b.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+ICONS[x[0]]+'</svg>';b.appendChild(mk("span","",x[1]));b.onclick=function(e){var r=b.getBoundingClientRect(),d=mk("span","rip");d.style.left=(e.clientX-r.left)+"px";d.style.top=(e.clientY-r.top)+"px";b.appendChild(d);setTimeout(function(){d.remove()},700);location.hash=x[0]};n.appendChild(b);});
+var PAGES=[
+["home","Главная"],
+["routes","Направления"],
+["how","Как купить"],
+["contacts","Контакты"]
+],
+dir="TR";
+
+
+function $(i){
+return document.getElementById(i)
 }
-var fly=null,lastTop=null,flyT=null;
-function moveInd(b){if(!b||!ind)return;ind.style.top=b.offsetTop+"px";ind.style.height=b.offsetHeight+"px";if(!fly)return;var t=b.offsetTop+(b.offsetHeight-24)/2,dy=lastTop===null?0:t-lastTop;fly.classList.remove("park");clearTimeout(flyT);if(dy!==0){fly.style.transform="rotate("+(dy>0?180:0)+"deg)";flyT=setTimeout(function(){fly.style.transform="rotate(90deg)";fly.classList.add("park")},760)}else{fly.style.transform="rotate(90deg)";fly.classList.add("park")}fly.style.top=t+"px";lastTop=t;}
-function show(p){PAGES.forEach(function(x){$("p-"+x[0]).classList.toggle("on",x[0]===p)});if(!navBuilt){buildNav();navBuilt=true}var cur=null;$("nav").querySelectorAll("button").forEach(function(b){if(b.dataset.p===p){b.setAttribute("aria-current","page");cur=b}else b.removeAttribute("aria-current")});moveInd(cur);window.scrollTo(0,0);}
-addEventListener("resize",function(){moveInd($("nav").querySelector("[aria-current]"))});
-function route(){var h=location.hash.slice(1);show(PAGES.some(function(x){return x[0]===h})?h:"home")}
-window.addEventListener("hashchange",route);route();
-var PD="M12 1C13 1 13.8 2.2 13.8 4V9L22 14V16.5L13.8 14.3V19.5L16 21.3V23L12 22L8 23V21.3L10.2 19.5V14.3L2 16.5V14L10.2 9V4C10.2 2.2 11 1 12 1Z",REGKEYS=["ru","eu","kr","cn"],ci=0,ALL=[];
-REGKEYS.forEach(function(k){ALL=ALL.concat(CONFIG.regions[k].cities)});
-function arrow(){return mk("i","arr")}
-function opt(list,id){var d=$(id);d.textContent="";list.forEach(function(c){var o=mk("option");o.value=c;d.appendChild(o)})}
-function regionOf(city){var c=String(city).trim().toLowerCase();if(CONFIG.tjCities.some(function(x){return x.toLowerCase()===c}))return "Таджикистан";for(var i=0;i<REGKEYS.length;i++){if(CONFIG.regions[REGKEYS[i]].cities.some(function(x){return x.toLowerCase()===c}))return CONFIG.regions[REGKEYS[i]].name}return ""}
-function buildStrips(){var box=$("strips");box.textContent="";var r=mk("div","strip act"),L=mk("span"),ln=mk("div","lane"),R=mk("span","","");R.id="ctry";var sv=document.createElementNS("http://www.w3.org/2000/svg","svg");sv.setAttribute("class","plane");sv.setAttribute("viewBox","0 0 24 24");sv.innerHTML='<g transform="rotate(90 12 12)"><path d="'+PD+'" fill="#FFC93C" stroke="#0E2A47" stroke-width=".9" stroke-linejoin="round"/></g>';sv.style.animationDuration="4.2s";sv.addEventListener("animationiteration",function(){ci=(ci+1)%REGKEYS.length;updateStrips(true)});ln.appendChild(sv);r.appendChild(L);r.appendChild(ln);r.appendChild(R);box.appendChild(r);}
-function updateStrips(flash){$("strips").classList.toggle("rtl",dir==="RT");var r=$("strips").firstChild,sp=r.children,n=CONFIG.regions[REGKEYS[ci]].label,c=sp[dir==="TR"?2:0],o=sp[dir==="TR"?0:2];o.textContent="ТАДЖИКИСТАН";c.textContent=n;if(flash){c.classList.remove("chg");void c.offsetWidth;c.classList.add("chg")}}
-var GR=[["tj","Таджикистан"],["ru","Россия"],["eu","Европа"],["kr","Корея"],["cn","Китай"]],fromReg="tj",toReg="ru";
-function citiesOf(k){return k==="tj"?CONFIG.tjCities:CONFIG.regions[k].cities}
-function chipsFor(box,side){box.textContent="";GR.forEach(function(g){var b=mk("button","",g[1]);b.type="button";b.dataset.k=g[0];b.onclick=function(){pick(side,g[0])};box.appendChild(b)});}
-function pick(side,k){var of=fromReg,ot=toReg;if(side==="from"){fromReg=k;if(k!=="tj")toReg="tj";else if(toReg==="tj")toReg="ru"}else{toReg=k;if(k!=="tj")fromReg="tj";else if(fromReg==="tj")fromReg="ru"}if(of!==fromReg)$("from").value="";if(ot!==toReg)$("to").value="";setUI();var fr=k!=="tj"?k:(side==="from"?toReg:fromReg),i=REGKEYS.indexOf(fr);if(i>-1){ci=i;updateStrips(true)}var f=$(side);f.focus();try{if(f.showPicker)f.showPicker()}catch(e){}}
-function setUI(){dir=fromReg==="tj"?"TR":"RT";$("dTR").setAttribute("aria-pressed",dir==="TR");$("dRT").setAttribute("aria-pressed",dir==="RT");opt(citiesOf(fromReg),"dlFrom");opt(citiesOf(toReg),"dlTo");$("chipsFrom").querySelectorAll("button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.k===fromReg)});$("chipsTo").querySelectorAll("button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.k===toReg)});updateStrips();}
-function setDir(d){if(d===dir)return;var a=$("from").value;$("from").value=$("to").value;$("to").value=a;var r=fromReg;fromReg=toReg;toReg=r;setUI()}
-$("dTR").onclick=function(){setDir("TR")};$("dRT").onclick=function(){setDir("RT")};
-function renderRoutes(){[["TR","routesTR"],["RT","routesRT"]].forEach(function(p){var box=$(p[1]);box.textContent="";REGKEYS.forEach(function(k){var card=mk("div","card"),h=mk("h2"),R=CONFIG.regions[k].name;h.appendChild(document.createTextNode(p[0]==="TR"?"Таджикистан":R));h.appendChild(arrow());h.appendChild(document.createTextNode(p[0]==="TR"?R:"Таджикистан"));card.appendChild(h);CONFIG.routes.filter(function(r){return r[0]===k}).forEach(function(r){var from=p[0]==="TR"?r[1]:r[2],to=p[0]==="TR"?r[2]:r[1];var row=mk("div","route"),w=mk("div"),bb=mk("b");bb.appendChild(document.createTextNode(from));bb.appendChild(arrow());bb.appendChild(document.createTextNode(to));w.appendChild(bb);w.appendChild(mk("span","",p[0]==="TR"&&r[3]?r[3]:"цена по запросу"));var btn=mk("button","btn","Запросить");btn.type="button";btn.onclick=function(){if(p[0]==="TR"){fromReg="tj";toReg=k}else{fromReg=k;toReg="tj"}setUI();ci=REGKEYS.indexOf(k);updateStrips(true);$("from").value=from;$("to").value=to;location.hash="home"};row.appendChild(w);row.appendChild(btn);card.appendChild(row);});box.appendChild(card);});});}
-function msg(){var other=dir==="TR"?$("to").value:$("from").value,rg=regionOf(other);return "Здравствуйте! Хочу узнать про билеты (TajFly).\nНаправление: "+(dir==="TR"?"Из Таджикистана":"В Таджикистан")+(rg?" ("+rg+")":"")+"\nОткуда: "+$("from").value+"\nКуда: "+$("to").value+"\nДата туда: "+$("d1").value+($("d2").value?"\nДата обратно: "+$("d2").value:"")+"\nПассажиров: "+$("pax").value+"\nИмя: "+$("name").value+"\nТелефон: "+$("tel").value;}
-$("form").addEventListener("submit",function(e){e.preventDefault();window.open(wa+"?text="+encodeURIComponent(msg()),"_blank","noopener")});
-$("sendTg").addEventListener("click",function(){if(!$("form").reportValidity())return;var t=msg(),note=$("tgNote");window.open("https://t.me/SadiSharifov1992?text="+encodeURIComponent(t),"_blank","noopener");note.textContent="";});
-chipsFor($("chipsFrom"),"from");chipsFor($("chipsTo"),"to");buildStrips();renderRoutes();setUI();
 
-(function(){var on=true,btn=$("motion");try{if(localStorage.getItem("anim")==="off")on=false}catch(e){}function apply(){document.documentElement.classList.toggle("still",!on);btn.textContent="Анимации: "+(on?"вкл":"выкл");document.querySelectorAll("svg").forEach(function(v){try{on?v.unpauseAnimations():v.pauseAnimations()}catch(e){}})}btn.onclick=function(){on=!on;try{localStorage.setItem("anim",on?"on":"off")}catch(e){}apply()};apply();})();
+
+function mk(t,c,x){
+var e=document.createElement(t);
+if(c)e.className=c;
+if(x!==undefined)e.textContent=x;
+return e
+}
+
+
+$("brand").textContent=CONFIG.brand;
+
+
+var WA=String(CONFIG.whatsapp).replace(/\D/g,""),
+TP=String(CONFIG.telegramPhone).replace(/\D/g,""),
+wa="https://wa.me/"+WA,
+tg="https://t.me/"+CONFIG.telegram;
+
+
+["sideWa","cWa"].forEach(function(i){
+$(i).href=wa
+});
+
+$("cTg").href=tg;
+
+$("cPhone").textContent=CONFIG.phone;
+
+$("cMsg").textContent=
+"WhatsApp: +"+WA+" · Telegram: @"+CONFIG.telegram;
+
+$("cAddr").textContent=CONFIG.address;
+$("cHours").textContent=CONFIG.hours;
+
+
+var ICONS={
+
+home:'<path d="M3 11l9-8 9 8M5 10v10h14V10"/>',
+
+routes:'<circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18c8 0 0-12 8-12"/>',
+
+how:'<path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/>',
+
+contacts:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>'
+
+};
+
+
+var navBuilt=false,ind=null,fly=null,lastTop=null,flyT=null;
+
+
+function buildNav(){
+
+var n=$("nav");
+
+ind=mk("span","ind");
+ind.setAttribute("aria-hidden","true");
+n.appendChild(ind);
+
+fly=mk("span","fly");
+fly.setAttribute("aria-hidden","true");
+
+fly.innerHTML=
+'<svg viewBox="0 0 24 24">'+
+'<path d="M12 1C13 1 13.8 2.2 13.8 4V9L22 14V16.5L13.8 14.3V19.5L16 21.3V23L12 22L8 23V21.3L10.2 19.5V14.3L2 16.5V14L10.2 9V4C10.2 2.2 11 1 12 1Z" fill="#FFC93C" stroke="#0E2A47" stroke-width=".8" stroke-linejoin="round"/>'+
+'</svg>';
+
+n.appendChild(fly);
+
+
+PAGES.forEach(function(x,k){
+
+var b=mk("button");
+
+b.dataset.p=x[0];
+
+b.style.setProperty("--d",(0.15+k*0.09)+"s");
+
+b.innerHTML=
+'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+
+ICONS[x[0]]+
+'</svg>';
+
+b.appendChild(mk("span","",x[1]));
+
+b.onclick=function(e){
+
+var r=b.getBoundingClientRect(),
+d=mk("span","rip");
+
+d.style.left=(e.clientX-r.left)+"px";
+d.style.top=(e.clientY-r.top)+"px";
+
+b.appendChild(d);
+
+setTimeout(function(){
+d.remove()
+},700);
+
+location.hash=x[0];
+
+};
+
+n.appendChild(b);
+
+});
+
+}
+
+
+function moveInd(b){
+
+if(!b||!ind)return;
+
+ind.style.top=b.offsetTop+"px";
+ind.style.height=b.offsetHeight+"px";
+
+if(!fly)return;
+
+var t=b.offsetTop+(b.offsetHeight-24)/2,
+dy=lastTop===null?0:t-lastTop;
+
+fly.classList.remove("park");
+clearTimeout(flyT);
+
+if(dy!==0){
+
+fly.style.transform="rotate("+(dy>0?180:0)+"deg)";
+
+flyT=setTimeout(function(){
+
+fly.style.transform="rotate(90deg)";
+fly.classList.add("park");
+
+},760);
+
+}else{
+
+fly.style.transform="rotate(90deg)";
+fly.classList.add("park");
+
+}
+
+fly.style.top=t+"px";
+lastTop=t;
+
+}
+
+
+function show(p){
+
+PAGES.forEach(function(x){
+
+$("p-"+x[0]).classList.toggle("on",x[0]===p);
+
+});
+
+if(!navBuilt){
+
+buildNav();
+navBuilt=true;
+
+}
+
+var cur=null;
+
+$("nav").querySelectorAll("button").forEach(function(b){
+
+if(b.dataset.p===p){
+
+b.setAttribute("aria-current","page");
+cur=b;
+
+}else{
+
+b.removeAttribute("aria-current");
+
+}
+
+});
+
+moveInd(cur);
+
+window.scrollTo(0,0);
+
+}
+
+
+addEventListener("resize",function(){
+
+moveInd($("nav").querySelector("[aria-current]"));
+
+});
+
+
+function route(){
+
+var h=location.hash.slice(1);
+
+show(
+PAGES.some(function(x){
+return x[0]===h
+})
+?h:"home"
+);
+
+}
+
+
+window.addEventListener("hashchange",route);
+
+route();
+
+
+var PD="M12 1C13 1 13.8 2.2 13.8 4V9L22 14V16.5L13.8 14.3V19.5L16 21.3V23L12 22L8 23V21.3L10.2 19.5V14.3L2 16.5V14L10.2 9V4C10.2 2.2 11 1 12 1Z",
+
+REGKEYS=["ru","eu","kr","cn"],
+ci=0,
+ALL=[];
+
+
+REGKEYS.forEach(function(k){
+
+ALL=ALL.concat(CONFIG.regions[k].cities);
+
+});
+
+
+function arrow(){
+
+return mk("i","arr");
+
+}
+
+
+function opt(list,id){
+
+var d=$(id);
+
+d.textContent="";
+
+list.forEach(function(c){
+
+var o=mk("option");
+
+o.value=c;
+
+d.appendChild(o);
+
+});
+
+}
+
+
+function regionOf(city){
+
+var c=String(city).trim().toLowerCase();
+
+if(CONFIG.tjCities.some(function(x){
+return x.toLowerCase()===c
+}))
+return "Таджикистан";
+
+
+for(var i=0;i<REGKEYS.length;i++){
+
+if(CONFIG.regions[REGKEYS[i]].cities.some(function(x){
+return x.toLowerCase()===c
+}))
+return CONFIG.regions[REGKEYS[i]].name;
+
+}
+
+return "";
+
+}
+
+
+function buildStrips(){
+
+var box=$("strips");
+
+box.textContent="";
+
+var r=mk("div","strip act"),
+L=mk("span"),
+ln=mk("div","lane"),
+R=mk("span","");
+
+R.id="ctry";
+
+var sv=document.createElementNS(
+"http://www.w3.org/2000/svg",
+"svg"
+);
+
+sv.setAttribute("class","plane");
+sv.setAttribute("viewBox","0 0 24 24");
+
+sv.innerHTML=
+'<g transform="rotate(90 12 12)">'+
+'<path d="'+PD+'" fill="#FFC93C" stroke="#0E2A47" stroke-width=".9" stroke-linejoin="round"/>'+
+'</g>';
+
+sv.style.animationDuration="4.2s";
+
+sv.addEventListener("animationiteration",function(){
+
+ci=(ci+1)%REGKEYS.length;
+
+updateStrips(true);
+
+});
+
+ln.appendChild(sv);
+
+r.appendChild(L);
+r.appendChild(ln);
+r.appendChild(R);
+
+box.appendChild(r);
+
+}
+
+
+function updateStrips(flash){
+
+$("strips").classList.toggle("rtl",dir==="RT");
+
+var r=$("strips").firstChild,
+sp=r.children,
+n=CONFIG.regions[REGKEYS[ci]].label,
+c=sp[dir==="TR"?2:0],
+o=sp[dir==="TR"?0:2];
+
+o.textContent="ТАДЖИКИСТАН";
+c.textContent=n;
+
+if(flash){
+
+c.classList.remove("chg");
+void c.offsetWidth;
+c.classList.add("chg");
+
+}
+
+}
+
+
+var GR=[
+["tj","Таджикистан"],
+["ru","Россия"],
+["eu","Европа"],
+["kr","Корея"],
+["cn","Китай"]
+],
+
+fromReg="tj",
+toReg="ru";
+
+
+function citiesOf(k){
+
+return k==="tj"
+?CONFIG.tjCities
+:CONFIG.regions[k].cities;
+
+}
+
+
+function chipsFor(box,side){
+
+box.textContent="";
+
+GR.forEach(function(g){
+
+var b=mk("button","",g[1]);
+
+b.type="button";
+b.dataset.k=g[0];
+
+b.onclick=function(){
+
+pick(side,g[0]);
+
+};
+
+box.appendChild(b);
+
+});
+
+}
+
+
+function pick(side,k){
+
+var of=fromReg,
+ot=toReg;
+
+if(side==="from"){
+
+fromReg=k;
+
+if(k!=="tj")
+toReg="tj";
+
+else if(toReg==="tj")
+toReg="ru";
+
+}else{
+
+toReg=k;
+
+if(k!=="tj")
+fromReg="tj";
+
+else if(fromReg==="tj")
+fromReg="ru";
+
+}
+
+if(of!==fromReg)
+$("from").value="";
+
+if(ot!==toReg)
+$("to").value="";
+
+setUI();
+
+var fr=k!=="tj"?k:(side==="from"?toReg:fromReg),
+i=REGKEYS.indexOf(fr);
+
+if(i>-1){
+
+ci=i;
+updateStrips(true);
+
+}
+
+var f=$(side);
+
+f.focus();
+
+try{
+
+if(f.showPicker)
+f.showPicker();
+
+}catch(e){}
+
+}
+
+
+function setUI(){
+
+dir=fromReg==="tj"?"TR":"RT";
+
+$("dTR").setAttribute(
+"aria-pressed",
+dir==="TR"
+);
+
+$("dRT").setAttribute(
+"aria-pressed",
+dir==="RT"
+);
+
+opt(citiesOf(fromReg),"dlFrom");
+opt(citiesOf(toReg),"dlTo");
+
+$("chipsFrom").querySelectorAll("button").forEach(function(b){
+
+b.setAttribute(
+"aria-pressed",
+b.dataset.k===fromReg
+);
+
+});
+
+$("chipsTo").querySelectorAll("button").forEach(function(b){
+
+b.setAttribute(
+"aria-pressed",
+b.dataset.k===toReg
+);
+
+});
+
+updateStrips();
+
+}
+
+
+function setDir(d){
+
+if(d===dir)
+return;
+
+var a=$("from").value;
+
+$("from").value=$("to").value;
+$("to").value=a;
+
+var r=fromReg;
+
+fromReg=toReg;
+toReg=r;
+
+setUI();
+
+}
+
+
+$("dTR").onclick=function(){
+setDir("TR")
+};
+
+$("dRT").onclick=function(){
+setDir("RT")
+};
+
+
+function renderRoutes(){
+
+[["TR","routesTR"],["RT","routesRT"]].forEach(function(p){
+
+var box=$(p[1]);
+
+box.textContent="";
+
+REGKEYS.forEach(function(k){
+
+var card=mk("div","card"),
+h=mk("h2"),
+R=CONFIG.regions[k].name;
+
+h.appendChild(
+document.createTextNode(
+p[0]==="TR"?"Таджикистан":R
+)
+);
+
+h.appendChild(arrow());
+
+h.appendChild(
+document.createTextNode(
+p[0]==="TR"?R:"Таджикистан"
+)
+);
+
+card.appendChild(h);
+
+CONFIG.routes
+.filter(function(r){
+return r[0]===k
+})
+.forEach(function(r){
+
+var from=p[0]==="TR"?r[1]:r[2],
+to=p[0]==="TR"?r[2]:r[1];
+
+var row=mk("div","route"),
+w=mk("div"),
+bb=mk("b");
+
+bb.appendChild(document.createTextNode(from));
+bb.appendChild(arrow());
+bb.appendChild(document.createTextNode(to));
+
+w.appendChild(bb);
+
+w.appendChild(
+mk(
+"span",
+"",
+p[0]==="TR"&&r[3]
+?r[3]
+:"цена по запросу"
+)
+);
+
+var btn=mk("button","btn","Запросить");
+
+btn.type="button";
+
+btn.onclick=function(){
+
+if(p[0]==="TR"){
+
+fromReg="tj";
+toReg=k;
+
+}else{
+
+fromReg=k;
+toReg="tj";
+
+}
+
+setUI();
+
+ci=REGKEYS.indexOf(k);
+
+updateStrips(true);
+
+$("from").value=from;
+$("to").value=to;
+
+location.hash="home";
+
+};
+
+row.appendChild(w);
+row.appendChild(btn);
+card.appendChild(row);
+
+});
+
+box.appendChild(card);
+
+});
+
+});
+
+}
+
+
+function msg(){
+
+var other=dir==="TR"
+?$("to").value
+:$("from").value;
+
+var rg=regionOf(other);
+
+return "Здравствуйте! Хочу узнать про билеты (TajFly).\n"+
+"Направление: "+
+(dir==="TR"
+?"Из Таджикистана"
+:"В Таджикистан")+
+(rg?" ("+rg+")":"")+
+"\nОткуда: "+
+$("from").value+
+"\nКуда: "+
+$("to").value+
+"\nДата туда: "+
+$("d1").value+
+($("d2").value
+?"\nДата обратно: "+$("d2").value:"")+
+"\nПассажиров: "+
+$("pax").value+
+"\nИмя: "+
+$("name").value+
+"\nТелефон: "+
+$("tel").value;
+
+}
+
+
+$("form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+window.open(
+wa+"?text="+encodeURIComponent(msg()),
+"_blank",
+"noopener"
+);
+
+});
+
+
+$("sendTg").addEventListener("click",function(){
+
+if(!$("form").reportValidity())
+return;
+
+var t=msg(),
+note=$("tgNote");
+
+window.open(
+tg+"?text="+encodeURIComponent(t),
+"_blank",
+"noopener"
+);
+
+note.textContent="";
+
+});
+
+
+chipsFor($("chipsFrom"),"from");
+chipsFor($("chipsTo"),"to");
+
+buildStrips();
+renderRoutes();
+setUI();
+
+
+(function(){
+
+var on=true,
+btn=$("motion");
+
+try{
+
+if(localStorage.getItem("anim")==="off")
+on=false;
+
+}catch(e){}
+
+
+function apply(){
+
+document.documentElement.classList.toggle(
+"still",
+!on
+);
+
+btn.textContent=
+"Анимации: "+(on?"вкл":"выкл");
+
+document.querySelectorAll("svg").forEach(function(v){
+
+try{
+
+on
+?v.unpauseAnimations()
+:v.pauseAnimations();
+
+}catch(e){}
+
+});
+
+}
+
+
+btn.onclick=function(){
+
+on=!on;
+
+try{
+
+localStorage.setItem(
+"anim",
+on?"on":"off"
+);
+
+}catch(e){}
+
+apply();
+
+};
+
+apply();
+
+})();
+
 </script>
+
 </body>
 </html>
